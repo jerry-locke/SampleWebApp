@@ -10,3 +10,10 @@ az appservice plan create -n SampleWebAppPlan -g SampleWebAppRG --sku FREE;
 echo "Creating web app using Node 8.1";
 az webapp create -g SampleWebAppRG --plan SampleWebAppPlan -n jlockeSampleWebApp --runtime "NODE|8.1";
 
+echo "installing nodejs"
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -;
+sudo apt-get install nodejs -y;
+
+echo "installing native addons"
+sudo apt-get install build-essential -y;
+
