@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jerry Locke - Technical Portfolio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <!-- Nav Begin -->
+    <nav class="w3-center hide">
+        <ul>
+            <li><a name="whoami" id="whoamiMenuItem">whoami</a></li>
+            <li><a name="devops" id="devopsMenuItem">/dev/ops/engineering</a></li>
+            <li><a name="contact" id="contactMenuItem">contact($me)</a></li>
+            <!--<li class="w3-right"><a class="active" href="#ohgodwhy">allthethings?!</a></li>-->
+        </ul>
+    </nav>
+    <!-- Nav End -->
+
+    <div class="mainContainer">
+        <!-- Main Begin -->
+        <div class="xterm" id="welcomeTerm">
+            <div class="typing">$/home/jlocke> ./ohai.sh --tech-interview --ignore $sadUxAttempt </div>
+            <div class="typing" id="termTxt">$/home/jlocke> <i class="cursor">_</i></div>
+        </div>
+        <!-- Main End -->
+
+        <!-- whoami begin -->
+        <div id="wai" class="hide">
+            <div class="xterm">
+                <p>I'm Jerry.</p>
+            </div>
+        </div>
+        <!-- whoami end -->
+
+        <!-- devops begin -->
+        <div id="devops" class="hide">
+            <div class="portfolioContainers">
+                <!--TODO: Add containers through javascript in columns and grid like-->
+            </div>
+            <div class="xterm">
+                <div class="">DevOps is a culture not a title. Play well with others. Automate all the things. Dev should know what's going on with ops and ops should know what's going on with dev. When we have effective communication and a good understanding of what's going on, we can accomplish pretty much anything.
+                </div>
+            </div>
+            <div class="devOpsImg">
+                <img id="imageRotator" src="">
+            </div>
+        </div>
+        <!-- devops end -->
+
+        <!-- contact begin -->
+        <div id="contact" class="w3-panel w3-border hide contact">
+            <div class="xterm">
+                Contact info. yadda yadda yadda....
+            </div>
+        </div>
+        <!-- contact end -->
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>

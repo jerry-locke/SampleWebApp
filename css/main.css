@@ -1,0 +1,169 @@
+body {
+    background: #000;
+    color: #FFF;
+    transition: background ease 10s;
+}
+
+.mainContainer {
+    background: #000;
+    width: 1000px;
+    margin: auto;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+li {
+    display: inline-block;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 56px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #333;
+}
+
+.active {
+    background-color: darkblue;
+    cursor:pointer;
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    display: block;
+    border: 2px solid white;
+    margin: auto;
+}
+
+.xterm {
+    width: 80%;
+    color: green;
+    height: 50px;
+    margin: 50px auto;
+    display: block;
+}
+
+/* whoami */
+.waiBackground {
+    margin:auto;
+    background-image: url('../images/jerry.jpg');
+    background-repeat: no-repeat;
+    background-position: 45% 10%;
+    background-color: #5D737E;
+    /*background-size: 500px;*/
+    /*width: 50%;*/
+    height: 500px; 
+}
+
+div.transbox {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 1px solid black;
+    opacity: 0.6;
+}
+
+div.transbox p {
+    margin: 5%;
+    font-weight: 900;
+    color: #000000;
+    width: 60%;
+}
+
+/* /dev/ops/engineering */
+.devOpsImg {
+    margin: 300px auto;
+    display: block;
+    max-width: 250px;
+}
+
+#imageRotator {
+    opacity:1;
+    transition: opacity 1s; 
+}
+
+#imageRotator.fadeOut {
+    opacity:0;
+}
+
+
+/* contact */
+
+.powershell {
+    color: white;
+    background: blue;
+    margin: 50px auto;
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+.typing {
+  color: lime; 
+  font-family: "Courier";
+  font-size: 20px;
+  margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  animation: type 4s steps(60, end); 
+}
+/*
+.typing2 {
+  color: lime; 
+  font-family: "Courier";
+  font-size: 20px;
+  margin: 10px 0 0 10px;
+  white-space: wrap;
+  overflow: hidden;
+  width: 100%;
+  animation: type 4s steps(60, end); 
+}*/
+
+.typing:nth-child(2){
+  animation: type2 8s steps(60, end);
+}
+
+/*.typing2:nth-child(2){
+  animation: type2 8s steps(60, end);
+}*/
+
+.cursor{
+    display: inline-block;
+    animation: blink 1s infinite;
+}
+
+
+::selection{
+  background: black;
+}
