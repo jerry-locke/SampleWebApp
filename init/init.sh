@@ -17,3 +17,13 @@ sudo apt-get install nodejs -y;
 echo "installing native addons"
 sudo apt-get install build-essential -y;
 
+##notes:
+##add a deployment user - note this is a global user for all deployments
+# az webapp deployment user set --user-name yournamehere --password yourpasswordhere
+
+##add git remote to deploy updates to Azure
+# git remote add azure https://<user>@<appName>.scm.azurewebsites.net:443/<appName>.git
+
+##deploy
+##git <action> <remoteName> <branch>
+# git push azure master
