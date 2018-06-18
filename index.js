@@ -1,52 +1,52 @@
 var http = require('http');
 var fs = require("fs");
 
-// http.createServer(function(request, response) {
+http.createServer(function(request, response) {
 
-// 	if(request.url === "/"){
-// 		sendFileContent(response, "index.html", "text/html");
-// 	}
-// 	else if(request.url === "/index"){
-// 		response.writeHead(200, {'Content-Type': 'text/html'});
-// 		response.write('<b>Hey there!</b><br /><br />This is the default response. Requested URL is: ' + request.url);
-// 	}
-// 	else if(/^\/[a-zA-Z0-9\/]*.js$/.test(request.url.toString())){
-// 		sendFileContent(response, request.url.toString().substring(1), "text/javascript");
-// 	}
-// 	else if(/^\/[a-zA-Z0-9\/]*.css$/.test(request.url.toString())){
-// 		sendFileContent(response, request.url.toString().substring(1), "text/css");
-//     }
-//     else if(/^\/[a-zA-Z0-9\/]*.png$/.test(request.url.toString())){
-// 		sendFileContent(response, request.url.toString().substring(1), "img/png");
-// 	}
-// 	else{
-// 		console.log("Requested URL is: " + request.url);
-// 		response.end();
-// 	}
-// }).listen(3000);
+	if(request.url === "/"){
+		sendFileContent(response, "index.html", "text/html");
+	}
+	else if(request.url === "/index"){
+		response.writeHead(200, {'Content-Type': 'text/html'});
+		response.write('<b>Hey there!</b><br /><br />This is the default response. Requested URL is: ' + request.url);
+	}
+	else if(/^\/[a-zA-Z0-9\/]*.js$/.test(request.url.toString())){
+		sendFileContent(response, request.url.toString().substring(1), "text/javascript");
+	}
+	else if(/^\/[a-zA-Z0-9\/]*.css$/.test(request.url.toString())){
+		sendFileContent(response, request.url.toString().substring(1), "text/css");
+    }
+    else if(/^\/[a-zA-Z0-9\/]*.png$/.test(request.url.toString())){
+		sendFileContent(response, request.url.toString().substring(1), "img/png");
+	}
+	else{
+		console.log("Requested URL is: " + request.url);
+		response.end();
+	}
+}).listen(3000);
 
-// function sendFileContent(response, fileName, contentType){
-// 	fs.readFile(fileName, function(err, data){
-// 		if(err){
-// 			response.writeHead(404);
-// 			response.write("Not Found!");
-// 		}
-// 		else{
-// 			response.writeHead(200, {'Content-Type': contentType});
-// 			response.write(data);
-// 		}
-// 		response.end();
-// 	});
-// }
+function sendFileContent(response, fileName, contentType){
+	fs.readFile(fileName, function(err, data){
+		if(err){
+			response.writeHead(404);
+			response.write("Not Found!");
+		}
+		else{
+			response.writeHead(200, {'Content-Type': contentType});
+			response.write(data);
+		}
+		response.end();
+	});
+}
 
-var server = http.createServer(function(request, response) {
+// var server = http.createServer(function(request, response) {
 
-    response.writeHead(200, {"Content-Type": "text/plain"});
-    response.end("Hello World!");
+//     response.writeHead(200, {"Content-Type": "text/plain"});
+//     response.end("Hello World!");
 
-});
+// });
 
-var port = process.env.PORT || 1450;
-server.listen(port);
+// var port = process.env.PORT || 1450;
+// server.listen(port);
 
-console.log("Server running at http://localhost:%d", port);
+// console.log("Server running at http://localhost:%d", port);
